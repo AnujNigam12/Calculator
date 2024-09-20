@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="calc">
+        <div id="content">
+            <div class="nav">
+                <h3 id="name">Calculator</h1>
+                <div class="solar">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box1"></div>
+                </div>
+            </div>
+            <form>
+                <div class="display">       
+                    <input type="text" name="dispaly" id="display">
+                </div>
+                <div class="btn">
+                    <input type="button" value='C' onclick="display.value = ''" id="clear">
+                    <input type="button" value='AC' onclick="display.value = display.value.slice(0, -1);" id="backspace">
+                    <input type="button" value='%' onclick="dispaly.value += '%'">
+                    <input type="button" value='/' onclick="dispaly.value += '/'">
+                    <br>
+                    <input type="button" value='7' onclick="dispaly.value += '7'">
+                    <input type="button" value='8' onclick="dispaly.value += '8'">
+                    <input type="button" value='9' onclick="dispaly.value += '9'">
+                    <input type="button" value='*' onclick="dispaly.value += '*'">
+                    <br>
+                    <input type="button" value='4' onclick="dispaly.value += '4'">
+                    <input type="button" value='5' onclick="dispaly.value += '5'">
+                    <input type="button" value='6' onclick="dispaly.value += '6'">
+                    <input type="button" value='-' onclick="dispaly.value += '-'">
+                    <br>
+                    <input type="button" value='1' onclick="dispaly.value += '1'">
+                    <input type="button" value='2' onclick="dispaly.value += '2'">
+                    <input type="button" value='3' onclick="dispaly.value += '3'">
+                    <input type="button" value='+' onclick="dispaly.value += '+'">
+                    <br>
+                    <input type="button" value='00' onclick="dispaly.value += '00'">
+                    <input type="button" value='0' onclick="dispaly.value += '0'">
+                    <input type="button" value='.' onclick="dispaly.value += '.'">
+
+                    <!-- 
+                        eval() - 
+                            It is a function property of the global object. The argument of the eval() function is a string. It will evaluate the source string as a script body, which means both statements and expressions are allowed. It returns the completion value of the code. For expressions, it's the value the expression evaluates to. 
+                    -->
+                    <input type="button" value='=' onclick="dispaly.value = eval(dispaly.value)" >
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+
+</html>
